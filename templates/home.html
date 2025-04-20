@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block css %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+{% endblock css %}
+
+{% block content %}
+	<!-- Content -->
+	<section class="d-flex flex-column justify-content-center flex-grow-1 about">
+		<div class="container-md d-md-flex flex-row-reverse justify-content-between align-items-center">
+			<div class="d-flex justify-content-center mb-4 mb-md-0">
+				<div class="img-box dark-mode">
+					<div class="img-content">
+						<img src="{{ url_for('static', filename='images/profile_image.PNG') }}"
+						     class="img-fluid rounded-circle" id="profile_img"
+						     alt="aksaim mohamed amin profile picture">
+					</div>
+				</div>
+			</div>
+			<div class="title">
+				<div class="display-5 py-1" id="intro-0"></div>
+				<div class="display-5 pb-2">
+					<span id="intro-1"></span>
+					<span id="intro-2"></span>
+					<span id="intro-3"></span>
+				</div>
+				<p class="lead my-4" id="intro">
+					Curious mind, relentless learner, and aspiring coding guru, merging physics with software
+					engineering for limitless innovation. 💻 🚀
+				</p>
+				<div class="mt-4 py-2">
+					<a href="{{ url_for('resume') }}" class="btn btn-primary me-4 my-2 my-md-0"
+					   id="download-btn">Download CV <i class="bi bi-download"></i>
+					</a>
+					<a href="{{ url_for('about') }}" class="btn btn-primary my-2 my-md-0" id="see-more-btn">More
+						Info <i class="bi bi-arrow-right"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Content -->
+{% endblock content %}

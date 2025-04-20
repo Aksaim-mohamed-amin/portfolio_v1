@@ -1,0 +1,275 @@
+/* profile image */
+.img-box {
+    position: relative;
+    opacity: 0;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+    animation: box 2s .3s ease-in forwards;
+    -webkit-animation: box 2s .3s ease-in forwards;
+    background-color: var(--bg-color);
+}
+
+.img-box.dark-mode {
+    background-color: var(--light-bg);
+}
+
+.img-box::before {
+    content: '';
+    position: absolute;
+    inset: -10px 100px;
+    background: var(--linear-bg2);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    animation: animate 8s 2s linear infinite;
+    -webkit-animation: animate 8s 2s linear infinite;
+}
+
+.img-box:hover::before {
+    inset: -20px 0;
+}
+
+.img-box::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    z-index: 1;
+    background-color: var(--light-bg);
+}
+
+.img-box.dark-mode::after {
+    background-color: var(--bg-color);
+}
+
+.img-content {
+    position: absolute;
+    inset: 20px;
+    z-index: 3;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--bg-color);
+}
+
+.img-box.dark-mode .img-content {
+    border: 3px solid var(--light-bg);
+}
+
+.img-content #profile_img {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    animation: imageFadeIn 1.5s .5s ease-in forwards;
+    -webkit-animation: imageFadeIn 1.5s .5s ease-in forwards;
+}
+
+@keyframes  box {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes imageFadeIn {
+    from {
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+        top: 25%;
+        left: 25%;
+    }
+    to {
+        width: 90%;
+        height: 90%;
+        opacity: 1;
+    }
+}
+
+@keyframes imageFadeInMobile {
+    from {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        top: 25%;
+        left: 25%;
+    }
+    to {
+        width: 90%;
+        height: 90%;
+        opacity: 1;
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+}
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+}
+}
+
+@media screen and (max-width: 768px) {
+    section.about {
+        margin-top: 100px;
+        padding-top: 10px;
+        justify-content: flex-start !important;
+    }
+    .first-cont {
+        justify-content: center !important;
+    }
+    .img-box {
+        width: 200px;
+        height: 200px;
+    }
+    .img-box::before {
+        inset: 0 50px;
+    }
+    .img-box::after {
+        inset:5px;
+    }
+    .img-content {
+        inset: 15px;
+    }
+
+    .img-content #profile_img {
+        animation: imageFadeInMobile 1.5s .5s ease-in forwards;
+        -webkit-animation: imageFadeInMobile 1.5s .5s ease-in forwards;
+}
+
+    .title {
+        padding: 0 20px;
+    }
+}
+/* End profile image */
+
+
+/* btn fade */
+#download-btn , #see-more-btn, #intro {
+    position: relative;
+    opacity: 0;
+}
+
+/* animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+        -webkit-transform: translateY(-60px);
+        -moz-transform: translateY(-60px);
+        -ms-transform: translateY(-60px);
+        -o-transform: translateY(-60px);
+}
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+        -webkit-transform: translateY(60px);
+        -moz-transform: translateY(60px);
+        -ms-transform: translateY(60px);
+        -o-transform: translateY(60px);
+}
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(80px);
+        -webkit-transform: translateX(80px);
+        -moz-transform: translateX(80px);
+        -ms-transform: translateX(80px);
+        -o-transform: translateX(80px);
+}
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+}
+
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-80px);
+        -webkit-transform: translateX(-80px);
+        -moz-transform: translateX(-80px);
+        -ms-transform: translateX(-80px);
+        -o-transform: translateX(-80px);
+}
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+}
+

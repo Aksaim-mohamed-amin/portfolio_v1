@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+	<!-- Content -->
+	<section class="d-flex flex-column justify-content-center flex-grow-1">
+		<div class="container-md text-left">
+			<form method="post" class="w-75 m-auto">
+				{{ form.hidden_tag() }}
+
+				<legend class="h3 mb-5 w-75 m-auto" style="color: var(--custom-purpel);">Contact Me</legend>
+
+				<div class="form-floating mb-3">
+					{{ form.name(class="form-control", id="floatingInput", placeholder="Name") }}
+					<label for="floatingInput">Name</label>
+				</div>
+
+				<div class="form-floating mb-3">
+					{{ form.email(class="form-control", id="floatingInputEmail", placeholder="name@example.com") }}
+					<label for="floatingInputEmail">Email address</label>
+				</div>
+
+				<div class="form-floating mb-3">
+					{{ form.subject(class="form-control", id="floatingInput", placeholder="Subject") }}
+					<label for="floatingInput">Subject</label>
+				</div>
+
+				<div class="form-floating mb-3">
+					{{ form.message(class="form-control", placeholder="Leave a message", id="floatingTextarea2", style="height: 100px") }}
+					<label for="floatingTextarea2">Your message</label>
+				</div>
+
+				{{ form.submit(class="btn btn-primary mt-4") }}
+			</form>
+		</div>
+	</section>
+	<!-- End Content -->
+{% endblock content %}

@@ -1,0 +1,6 @@
+.display-6 {
+    background: var(--linear-bg);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}

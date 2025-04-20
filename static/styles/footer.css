@@ -1,0 +1,22 @@
+footer .container-md{
+    padding: 10px 0;
+    border-top: 1px solid var(--custom-purpel);
+    box-shadow: var(--custom-purpel) 0px 10px 20px -17px;
+}
+.contact a i {
+    color: var(--custom-purpel);
+    font-size: 20px;
+}
+.contact a i:hover {
+    opacity: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    footer .container-md{
+        text-align: center;
+    }
+    footer .social {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}

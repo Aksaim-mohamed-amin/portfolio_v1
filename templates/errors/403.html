@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block css %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/errors/error_pages.css') }}">
+{% endblock css %}
+
+{% block content %}
+	<!-- Content -->
+	<section class="d-flex flex-column justify-content-center flex-grow-1">
+		<div class="container-md text-center text-center">
+			<div class="display-1 m-3">
+				Access denied
+			</div>
+			<div class="lead">
+				You don't the right permission to access this page.
+			</div>
+		</div>
+	</section>
+	<!-- End Content -->
+{% endblock content %}

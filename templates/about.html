@@ -1,0 +1,281 @@
+{% extends "layout.html" %}
+
+{% block css %}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='/styles/about.css') }}">
+{% endblock css %}
+
+{% block content %}
+	<!-- Content -->
+	<section class="flex-grow-1 about">
+		<div class="container-md">
+			<button id="prev"><i class="bi bi-chevron-double-down"></i></button>
+			<button id="next"><i class="bi bi-chevron-double-down"></i></button>
+
+			<div class="section" id="info">
+				<div class="section-title display-4" role="heading" aria-level="2">
+					Who Am I? <i class="bi bi-person-bounding-box" aria-hidden="true"></i>
+				</div>
+				<div class="section-content">
+					<p>
+						Hey there! I'm <span class="author">Aksaim Mohamed Amin</span>,
+						a passionate Full Stack Developer and tech enthusiast with a background
+						in email marketing. With a solid foundation in web development,
+						data structures, and software engineering, I focus on transforming
+						creative ideas into efficient, user-friendly applications.
+						Currently diving deeper into advanced web engineering, I’m here to
+						build impactful solutions.
+					</p>
+				</div>
+			</div>
+
+			<div class="section" id="stack" role="region" aria-labelledby="stack-title">
+				<div class="section-title display-4" id="stack-title" role="heading" aria-level="2">
+					My Tech Stack <i class="bi bi-stack" aria-hidden="true"></i>
+				</div>
+				<div class="section-content">
+					<p>
+						Through hands-on projects and continuous learning, I've built a strong foundation in the
+						following technologies:
+					</p>
+					<ul>
+						<li>
+							<span class="list-title">Languages:</span> Java, Python, JavaScript, C.
+						</li>
+						<li>
+							<span class="list-title">Web Development:</span> HTML, CSS, Bootstrap, Flask, Angular.
+						</li>
+						<li>
+							<span class="list-title">Database:</span> MySQL.
+						</li>
+						<li>
+							<span class="list-title">Tools & DevOps:</span> Linux, Shell Scripting, Git/GitHub, Fabric,
+							Puppet,
+							Nginx, HAProxy, Gunicorn, Redis, Celery, Datadog, Docker.
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="section" id="projects" role="region" aria-labelledby="projects-title">
+				<div class="section-title display-4" id="projects-title" role="heading" aria-level="2">
+					Projects <i class="bi bi-window-stack" aria-hidden="true"></i>
+				</div>
+				<div class="section-content">
+					<p>Here are some of the exciting projects I've worked on:</p>
+
+					<!-- swiper -->
+					<div class="swiper">
+						<div class="slide-content">
+							<ul class="swiper-wrapper">
+
+								<!-- project 1 -->
+								<li class="swiper-slide project-card" role="group" aria-labelledby="portfolio-title"
+								    aria-describedby="portfolio-desc">
+									<div class="card-title" id="portfolio-title">Portfolio</div>
+									<div class="card-description" id="portfolio-desc">
+										Designed and developed a comprehensive portfolio to showcase my projects and
+										technical blog posts.
+										This platform integrates a fully functional blog, user authentication, and email
+										notifications,
+										providing a seamless and dynamic user experience.
+									</div>
+									<div class="stack-used">
+										<strong>Tech Stack:</strong>
+										<div id="stack-icons">
+											<img src="{{ url_for('static', filename='images/icons/html.svg') }}"
+											     alt="HTML Icon" title="HTML">
+											<img src="{{ url_for('static', filename='images/icons/css.svg') }}"
+											     alt="CSS Icon" title="CSS">
+											<img src="{{ url_for('static', filename='images/icons/javascript.svg') }}"
+											     alt="JavaScript Icon" title="JavaScript">
+											<img src="{{ url_for('static', filename='images/icons/bootstrap.svg') }}"
+											     alt="Bootstrap Icon" title="Bootstrap">
+											<img src="{{ url_for('static', filename='images/icons/flask.svg') }}"
+											     alt="Flask Icon" title="Flask">
+											<img src="{{ url_for('static', filename='images/icons/python.svg') }}"
+											     alt="Python Icon" title="Python">
+											<img src="{{ url_for('static', filename='images/icons/nginx.svg') }}"
+											     alt="Nginx Icon" title="Nginx">
+											<img src="{{ url_for('static', filename='images/icons/linux.svg') }}"
+											     alt="Linux Icon" title="Linux">
+										</div>
+									</div>
+									<a href="https://aksaim.tech" target="_blank" rel="noopener noreferrer"
+									   class="btn btn-primary card-link" aria-label="Explore Portfolio Project">
+										Explore Project <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+									</a>
+								</li>
+
+								<!-- project 2 -->
+								<li class="swiper-slide project-card" role="group" aria-labelledby="airbnb-title"
+								    aria-describedby="airbnb-desc">
+									<div class="card-title" id="airbnb-title">Airbnb Clone</div>
+									<div class="card-description" id="airbnb-desc">
+										A full-stack clone with user functionality, built with Flask and SQLAlchemy,
+										featuring a responsive Bootstrap UI.
+									</div>
+									<div class="stack-used">
+										<strong>Tech Stack:</strong>
+										<div id="stack-icons">
+											<img src="{{ url_for('static', filename='images/icons/html.svg') }}"
+											     alt="HTML Icon" title="HTML">
+											<img src="{{ url_for('static', filename='images/icons/css.svg') }}"
+											     alt="CSS Icon" title="CSS">
+											<img src="{{ url_for('static', filename='images/icons/javascript.svg') }}"
+											     alt="JavaScript Icon" title="JavaScript">
+											<img src="{{ url_for('static', filename='images/icons/bootstrap.svg') }}"
+											     alt="Bootstrap Icon" title="Bootstrap">
+											<img src="{{ url_for('static', filename='images/icons/flask.svg') }}"
+											     alt="Flask Icon" title="Flask">
+											<img src="{{ url_for('static', filename='images/icons/python.svg') }}"
+											     alt="Python Icon" title="Python">
+											<img src="{{ url_for('static', filename='images/icons/mysql.svg') }}"
+											     alt="MySQL Icon" title="MySQL">
+											<img src="{{ url_for('static', filename='images/icons/nginx.svg') }}"
+											     alt="Nginx Icon" title="Nginx">
+											<img src="{{ url_for('static', filename='images/icons/linux.svg') }}"
+											     alt="Linux Icon" title="Linux">
+										</div>
+									</div>
+									<a href="https://github.com/Aksaim-mohamed-amin/AirBnB_clone_v2/tree/master"
+									   target="_blank" rel="noopener noreferrer" class="btn btn-primary card-link"
+									   aria-label="Explore Airbnb Clone Project">
+										Explore Project <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+									</a>
+								</li>
+
+								<!-- project 3 -->
+								<li class="swiper-slide project-card" role="group" aria-labelledby="shell-title"
+								    aria-describedby="shell-desc">
+									<div class="card-title" id="shell-title">Simple Shell Program</div>
+									<div class="card-description" id="shell-desc">
+										Developed a basic shell for Unix-like systems using the C programming language,
+										enabling command execution and script processing.
+									</div>
+									<div class="stack-used">
+										<strong>Tech Stack:</strong>
+										<div id="stack-icons">
+											<img src="{{ url_for('static', filename='images/icons/c.svg') }}"
+											     alt="C programming language icon" title="C programming language">
+										</div>
+									</div>
+									<a href="https://github.com/Aksaim-mohamed-amin/simple_shell" target="_blank"
+									   rel="noopener noreferrer" class="btn btn-primary card-link"
+									   aria-label="Explore Simple Shell Project">
+										Explore Project <i class="bi bi-box-arrow-up-right"></i>
+									</a>
+								</li>
+
+								<!-- project 4 -->
+								<li class="swiper-slide project-card" role="group" aria-labelledby="printf-title"
+								    aria-describedby="printf-desc">
+									<div class="card-title" id="printf-title">Printf Function</div>
+									<div class="card-description" id="printf-desc">
+										Developed a custom implementation of the standard C `printf` function,
+										replicating its functionality for formatted output.
+									</div>
+									<div class="stack-used">
+										<strong>Tech Stack:</strong>
+										<div id="stack-icons">
+											<img src="{{ url_for('static', filename='images/icons/c.svg') }}"
+											     alt="C programming language icon" title="C programming language">
+										</div>
+									</div>
+									<a href="https://github.com/Aksaim-mohamed-amin/printf" target="_blank"
+									   rel="noopener noreferrer" class="btn btn-primary card-link"
+									   aria-label="Explore Printf Function Project">
+										Explore Project <i class="bi bi-box-arrow-up-right"></i>
+									</a>
+								</li>
+
+								<!-- project 5 -->
+								<li class="swiper-slide project-card">
+									<div class="card-title">Data Structures & Algorithms</div>
+									<div class="card-description">
+										Implemented foundational algorithms, including binary trees and sorting
+										algorithms, all in C.
+									</div>
+									<div class="stack-used">
+										<strong>Tech Stack:</strong>
+										<div id="stack-icons">
+											<img src="{{ url_for('static', filename='images/icons/c.svg') }}"
+											     alt="C programing language Icon"
+											     title="C programing language">
+										</div>
+									</div>
+									<div class="con d-flex">
+										<a href="https://github.com/Aksaim-mohamed-amin/sorting_algorithms"
+										   target="_blank" rel="noopener noreferrer"
+										   class="btn btn-primary d-block px-1 card-link">
+											Linked Lists</i>
+										</a>
+										<a href="https://github.com/Aksaim-mohamed-amin/binary_trees" target="_blank"
+										   rel="noopener noreferrer" class="btn btn-primary d-block px-1 card-link">
+											Binary Trees</i>
+										</a>
+									</div>
+								</li>
+
+								<!-- project 6 -->
+								<li class="swiper-slide project-card" role="group" aria-labelledby="templates-title"
+								    aria-describedby="templates-desc">
+									<div class="card-title" id="templates-title">Web Templates</div>
+									<div class="card-description" id="templates-desc">
+										Full templates using HTML and CSS, hosted on GitHub Pages.
+									</div>
+									<div class="stack-used">
+										<strong>Tech Stack:</strong>
+										<div id="stack-icons">
+											<img src="{{ url_for('static', filename='images/icons/html.svg') }}"
+											     alt="HTML Icon" title="HTML">
+											<img src="{{ url_for('static', filename='images/icons/css.svg') }}"
+											     alt="CSS Icon" title="CSS">
+										</div>
+									</div>
+									<div class="con d-flex">
+										<a href="https://aksaim-mohamed-amin.github.io/Template_One/"
+										   class="btn btn-primary card-link d-block px-2" target="_blank"
+										   rel="noopener noreferrer" aria-label="Explore Template 1">Template 1</a>
+										<a href="https://aksaim-mohamed-amin.github.io/Template_Two/"
+										   class="btn btn-primary card-link d-block px-2" target="_blank"
+										   rel="noopener noreferrer" aria-label="Explore Template 2">Template 2</a>
+									</div>
+								</li>
+
+							</ul>
+							<div class="swiper-pagination"></div>
+							<i class="bi bi-caret-left swiper-button-prev"></i>
+							<i class="bi bi-caret-right swiper-button-next"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section" id="more">
+				<div class="section-title display-4">
+					What I'm Working On <i class="bi bi-person-workspace"></i>
+				</div>
+				<div class="section-content">
+					<p>Currently, I'm building my portfolio at
+						<a href="https://aksaim.me" class="link" target="_blank" rel="noopener noreferrer">Aksaim.me</a>,
+						I also like to solve coding problems and challenges at leetcode , check my account for more
+						<a href="https://leetcode.com/u/aksaimmohamedamin/" class="link" target="_blank"
+						   rel="noopener noreferrer">LeetCode</a>
+					</p>
+					<a href="{{ url_for('resume') }}" class="btn btn-primary mt-4">Resume <i
+							class="bi bi-download"></i></a>
+					<a href="https://github.com/Aksaim-mohamed-amin" target="_blank" rel="noopener noreferrer"
+					   class="btn btn-primary mt-4">Github <i class="bi bi-github"></i></a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- End Content -->
+{% endblock content %}
+
+{% block scripts %}
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="{{ url_for('static', filename='/scripts/about.js') }}"></script>
+{% endblock scripts %}

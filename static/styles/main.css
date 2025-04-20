@@ -1,0 +1,80 @@
+/* Global Variables */
+:root{
+    --bg-color: #212529;
+    --light-bg: #ffffff;
+    --linear-bg: linear-gradient(180deg, var(--custom-pink) 0%, var(--custom-purpel) 51%, var(--bg-color) 100%);
+    --linear-bg2: linear-gradient(90deg, var(--custom-pink), var(--custom-purpel));
+    --main-textColor: #f8f9fa;
+    --secendry-textColor: #ABB2BF;
+    --custom-pink: #E06B74;
+    --custom-purpel: #c778dd;
+    --custom-green: #98C379;
+    --costum-yellow: #E5C07A;
+    --custom-blue: #62AEEF;
+    --custom-turquoise: #55B6C2;
+}
+
+/* Global Rules */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Fira Code";
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.btn-primary {
+    background-color: var(--custom-purpel);
+    border-color: var(--custom-purpel);
+}
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--custom-purpel);
+    border-color: var(--custom-purpel);
+}
+
+/* alerts */
+.alert {
+    position: absolute;
+    margin: 100px auto 0 auto;
+    z-index: 1000;
+    bottom: 60px;
+    right: 100px;
+    margin-top: 100px;
+    max-width: fit-content;
+    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.alert-success {
+    background-color: transparent;
+    color: var(--custom-purpel);
+    border: none;
+}
+#hideMe {
+    animation: cssAnimation .5s ease-in 5s forwards;
+    -webkit-animation: cssAnimation .5s ease-in 5s forwards;
+}
+@keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        overflow:hidden;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    to {
+        width:0;
+        height:0;
+        visibility:hidden;
+    }
+}

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block css %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/errors/error_pages.css') }}">
+{% endblock css %}
+
+{% block content %}
+	<!-- Content -->
+	<section class="d-flex flex-column justify-content-center flex-grow-1">
+		<div class="container-md text-center text-center">
+			<div class="display-1 m-3">
+				500
+			</div>
+			<div class="lead">
+				Somthing went Wrong! <br>
+				We're experiencing some trouble on our end, Pleas try again later.
+			</div>
+		</div>
+	</section>
+	<!-- End Content -->
+{% endblock content %}
